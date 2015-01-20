@@ -213,10 +213,10 @@
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
-    \newunit%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
+   % \newunit%
+  %  \printlist{publisher}%
+  %  \setunit*{\addcomma\space}%
+%    \printfield{year}%
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
