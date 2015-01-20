@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%xelatex
+%biber
+%xelatex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{cory}{schillaci}{machine learning, analytics, and big data} % Your name and current job title/field
+\footer{linkedin.com/in/coryschillaci}
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+\href{mailto:schillaci@berkeley.edu}{schillaci@berkeley.edu}
+~
+cell: 206-930-9189
+%~
+%\url{linkedin.com/in/coryschillaci}
+~
+1968 Marin Avenue
+Berkeley, CA 94707
+\section{programming}
+Python, C/C++
+\section{selected skills}
+data analysis
+machine learning
+scientific programming
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2009--2015}
+{PhD, {\normalfont  Physics}}
+{The University of California, Berkeley}
+{Emphasis on theoretical nuclear physics.}
+%------------------------------------------------
+\entry
+{2005--2009}
+{Bachelor of Science, {\normalfont Physics}}
+{The University of Washington}
+{Graduated magna cum laude with honors.\\ Minors in mathematics and chemistry.}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	RELEVANT COURSEWORK SECTION
+%----------------------------------------------------------------------------------------
+
+\section{coursework}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{Spring 2014}
+{CS 289A: Introduction to Machine Learning}
+{UC Berkeley}
+{Graduate course introducing widely-used regression and classification models.} 
+%------------------------------------------------
+\entry
+{Spring 2014}
+{Info 290T: Data Mining}
+{UC Berkeley}
+{Practical execution of the data mining workflow including data cleaning, ETL pipelines, distributed computing, modeling, and visualization.}
+%------------------------------------------------
+\entry
+{Fall 2014}
+{CS 281A: Statistical Learning Theory}
+{UC Berkeley}
+{Graduate course focusing on theoretical foundations of statistical inference and applications to machine learning.}
+%------------------------------------------------
+\entry
+{Jan. 2015}
+{Distributed Analytics \& ML with Apache Spark}
+{Berkeley Institute for Data Science}
+{Introduction to Apache Spark for distributed analysis of large data sets.}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{projects}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{Enhancing Wind Forecasts with Machine Learning}
+{}
+{Worked with Sail Tactics, LLC to apply machine learning to improve their forecast product.\begin{itemize}
+\item Real world experience with data munging, Amazon S3 and PostgreSQL.
+\item Improved RMSE of wind speed predictions by 20\%.
+\end{itemize}
+}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	Skills SECTION
+%----------------------------------------------------------------------------------------
+
+\section{skills}
+%Physics grad school allowed me to develop a strong background in mathematics, experience presenting technical concepts to all audiences, and the ability to acquire new knowledge quickly
+\textbf{general:} strong math background, experience critically assessing data and methodologies, rapid acquisition of new tools and concepts, technical presentations \\ 
+\textbf{programming languages:} Python, C/C++, Mathematica, Matlab, Julia\\
+\textbf{data toolbox:} scikit-learn, git, Apache Spark, SQL
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{publications}
+%
+%\printbibsection{article} % Print all articles from the bibliography
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
