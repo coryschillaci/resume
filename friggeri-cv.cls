@@ -83,7 +83,7 @@
       \thinfont #3%
     };
   \end{tikzpicture}
-  \vspace{2.0cm}
+  \vspace{1.5cm} %%%% Adjust start of body 1 of 2
   \vspace{-2\parskip}
 }
 
@@ -159,7 +159,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+  #1&\parbox[t]{12.5cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -179,7 +179,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.4}(1.0, 3.33)%%%% Adjust start of body 2 of 2 
   \begin{flushright}
   \obeycr
 }{%
@@ -206,94 +206,16 @@
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
   \newblock%
-  \printnames{author}%
-  \par%
+  \printnames{author}. %
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+   \addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
     \newunit%
     \printlist{publisher}%
     \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\DeclareBibliographyDriver{book}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-
-\DeclareBibliographyDriver{inproceedings}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}%
-    \printfield{booktitle}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\DeclareBibliographyDriver{misc}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{booktitle}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\DeclareBibliographyDriver{report}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{type}%
-    \setunit{\space}%
-    \printfield{number}%
-    \setunit{\addcomma\space}%
     \printfield{year}%
     \newunit%
   }
@@ -326,5 +248,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.25cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry} 
 \RequirePackage{hyperref}
