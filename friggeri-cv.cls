@@ -9,6 +9,11 @@
 \LoadClass{article}
 
 
+% Make itemize environments non-indented
+\RequirePackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
@@ -223,7 +228,8 @@
 }
 
 \DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
+  %\small
+  \addfontfeature{Color=lightgray}%
   \ifblank{#3}{}{#3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
