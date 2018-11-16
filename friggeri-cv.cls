@@ -167,7 +167,7 @@
   #1&\parbox[t]{12.5cm}{%
     \textbf{#2}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    {\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
   }\\}
 
@@ -198,7 +198,7 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, backend=biber, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=verbose, backend=biber, maxcitenames=3, sorting=ydnt]{biblatex}
 
 \setlength\bibhang{0pt}
 
@@ -211,7 +211,7 @@
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
   \newblock%
-  \printnames{author}. %
+  \printnames{author} %
   \newblock%
   {%
    \addfontfeature{Color=lightgray}\itshape%
@@ -227,13 +227,36 @@
   \par\vspace{0.3\baselineskip}
 }
 
+\DeclareBibliographyDriver{inproceedings}{%
+  \printfield{title}%
+  \newblock%
+  \printnames[1-3]{author} %
+  \newblock%
+  {%
+   \addfontfeature{Color=lightgray}\itshape%
+    \usebibmacro{journal}%
+    %\setunit{\space}%
+%    \printfield{pages}%
+   % \newunit%
+  %  \printlist{publisher}%
+  %  \setunit*{\addcomma\space}%
+%    \printfield{year}%
+   % \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
 \DeclareNameFormat{author}{%
   %\small
   \addfontfeature{Color=lightgray}%
   \ifblank{#3}{}{#3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
-    {}%
+    {\ifthenelse{\ifmorenames}
+    	{\andothersdelim\bibstring[\emph]{andothers}}
+	{.}%
+    }
+  %\unspace
 }
 
 \newcommand{\printbibsection}[2]{

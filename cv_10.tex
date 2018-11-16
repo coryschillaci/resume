@@ -29,7 +29,7 @@
 
 \begin{document}
 
-\header{cory}{schillaci}{machine learning, analytics, and big data} % Your name and current job title/field
+\header{cory}{schillaci}{Machine Learning and Data Science} % Your name and current job title/field
 \footer{linkedin.com/in/coryschillaci\hspace{.25cm}{\small\bullet}\hspace{.25cm} github.com/coryschillaci}
 
 %----------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@
 
 \begin{aside} % In the aside, each new line forces a line break
 \section{contact}
-\href{mailto:schillaci@berkeley.edu}{schillaci@berkeley.edu}
+\href{mailto:coryschillaci@gmail.com}{coryschillaci@gmail.com}
 ~
 +1 (206) 930-9189
 %~
@@ -47,14 +47,32 @@
 1968 Marin Avenue
 Berkeley, CA 94707
 \section{programming}
-Python, C/C++, Scala, Mathematica, SQL, Matlab, Julia
+Python, C/C++, SQL, Mathematica
 ~
-scikit-learn, Spark, MLlib, BIDMach, MapReduce, git
+scikit-learn, PySpark, Cython, TensorFlow
 \section{selected skills}
-data analysis
 machine learning
 sci. programming
 \end{aside}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{professional experience}
+%
+\begin{entrylist}
+\entry{Aug. 2015}
+{Data Scientist}
+{Streetline, Inc}
+{\vspace{-\baselineskip}
+\begin{itemize}
+\item R\&D of machine learning algorithms to predict parking availability
+\item Leveraged ML to reduce cost of hardware based deployment by more than 80\%
+%\item Support custom data mining needs of business team
+\end{itemize}
+}
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -90,8 +108,10 @@ sci. programming
 %----------------------------------------------------------------------------------------
 
 \section{publications}
-
-\printbibsection{article} % Print all articles from the bibliography
+\newrefcontext[sorting=chronological]%
+    \nocite{*}%
+    \printbibliography[heading=none]%
+%\printbibsection{article} % Print all articles from the bibliography
 
 
 %----------------------------------------------------------------------------------------
@@ -126,38 +146,43 @@ sci. programming
 {Berkeley Institute for Data Science}
 {Apache Spark and MLlib for distributed analysis of large data sets including click-through rate predictions and log analysis.}
 %------------------------------------------------
+\entry
+{In Progress}
+{CS 294: Deep Reinforcement Learning}
+{UC Berkeley}
+{Reinforcement learning with deep neural networks. Topics include imitation learning, policy gradient methods, and Q-learning. Self study.}
+%------------------------------------------------
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
-
-\section{projects}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2014}
-{Enhancing Wind Forecasts with Machine Learning}
-{}
-{Worked with Sail Tactics, LLC to apply machine learning to improve their forecast product.\begin{itemize}
-%\item Forecast data stored using PostgreSQL and PostGIS on Amazon S3
-%\item Extensive data acquisition and cleaning from government sources. 
-\item Improved RMSE of wind speed predictions by 20\% using time series analysis.
-\end{itemize}
-}
-%------------------------------------------------
-\entry
-{2015}
-{Sentiment Analysis and Stress Management (LiveJournal Posts)}
-{}
-{Working with Prof. John Canny to analyze sentiment and identify stress predictors from blog text.
-\begin{itemize}
-\item Experience with basic NLP pipeline including parsing using flex, linear models and neural networks, semantic analysis with word2vec, etc for 300GB of data. 
-\end{itemize}
-}
-%------------------------------------------------
-\end{entrylist}
+%\section{projects}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%\entry
+%{2014}
+%{Enhancing Wind Forecasts with Machine Learning}
+%{}
+%{Worked with Sail Tactics, LLC to apply machine learning to improve their forecast product.\begin{itemize}
+%%\item Forecast data stored using PostgreSQL and PostGIS on Amazon S3
+%%\item Extensive data acquisition and cleaning from government sources. 
+%\item Improved RMSE of wind speed predictions by 20\% using time series analysis.
+%\end{itemize}
+%}
+%%------------------------------------------------
+%\entry
+%{2015}
+%{Sentiment Analysis and Stress Management (LiveJournal Posts)}
+%{}
+%{Working with Prof. John Canny to analyze sentiment and identify stress predictors from blog text.
+%\begin{itemize}
+%\item Experience with basic NLP pipeline including parsing using flex, linear models and neural networks, semantic analysis with word2vec, etc for 300GB of data. 
+%\end{itemize}
+%}
+%%------------------------------------------------
+%\end{entrylist}
 %----------------------------------------------------------------------------------------
 %	Skills SECTION
 %----------------------------------------------------------------------------------------
