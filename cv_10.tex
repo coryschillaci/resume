@@ -27,6 +27,10 @@
 
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
+\let\tempone\itemize
+\let\temptwo\enditemize
+\renewenvironment{itemize}{\tempone\addtolength{\itemsep}{0.5em}}{\temptwo}
+
 \begin{document}
 
 \header{cory}{schillaci}{Machine Learning and Data Science} % Your name and current job title/field
@@ -44,15 +48,16 @@
 %~
 %\url{linkedin.com/in/coryschillaci}
 ~
-1968 Marin Avenue
-Berkeley, CA 94707
+1512 Bonita Avenue
+Berkeley, CA 94709
 \section{programming}
-Python, C/C++, SQL, Mathematica
+Python, C/C++
 ~
-scikit-learn, PySpark, Cython, TensorFlow
+Pytorch, OpenCV, TensorRT, Pandas, Docker
 \section{selected skills}
-machine learning
-sci. programming
+deep computer vision 
+HMMs
+robotics integration
 \end{aside}
 
 %----------------------------------------------------------------------------------------
@@ -62,14 +67,28 @@ sci. programming
 \section{professional experience}
 %
 \begin{entrylist}
-\entry{Aug. 2015}
-{Data Scientist}
-{Streetline, Inc}
+\entry{Jan. 2018\\- present}
+{Machine Learning Engineer}
+{Saildrone}
 {\vspace{-\baselineskip}
 \begin{itemize}
-\item R\&D of machine learning algorithms to predict parking availability
-\item Leveraged ML to reduce cost of hardware based deployment by more than 80\%
-%\item Support custom data mining needs of business team
+\item Developed AI perception systems that integrate with unmanned wind-powered ocean vehicles (Saildrones) to provide realtime awareness of marine traffic and wildlife 
+\item Trained heavily pruned deep object detection and image classification models in Pytorch for faster inference while maintaining high precision and recall
+\item Deployed models to Jetson Nano/AGX platforms with TensorRT for optimal inference time performance
+\item Managed third party data annotation of ~300k images taken by Saildrones at sea
+\item Worked on all parts of the camera system including C++ integration with NVIDIA libraries such as LibArgus and TensorRT, platform integration with primary Saildrone operating system via gRPC, scalable deployment processes using SaltStack, end-to-end integration testing using CircleCI and real hardware, etc.
+\end{itemize}
+}
+\smallskip
+\entry{Aug. 2015 - \\Jan. 2018}
+{Data Scientist}
+{Streetline}
+{\vspace{-\baselineskip}
+\begin{itemize}
+\item R\&D of machine learning algorithms to predict parking availability in real time from multi-modal sensor data including custom magnetic sensors, parking meters, cameras, and cell phone accelerometer/GPS data
+\item Developed a modified time-dependent hidden Markov model and custom expectation-maximization training algorithms.
+\item Interfaced with platform team to design a custom geospatial backend for data ingest, inference and display of final results. Worked with PostGIS, Open Street Maps, QGIS and other geospatial tools.
+%\item Supported custom data analysis and data presentation needs of business, sales and client services teams.
 \end{itemize}
 }
 \end{entrylist}
@@ -77,7 +96,7 @@ sci. programming
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
-
+\vspace{-\baselineskip}
 \section{education}
 
 \begin{entrylist}
@@ -85,17 +104,17 @@ sci. programming
 \entry
 {Dec. 2015}
 {PhD, {\normalfont  Physics (Haxton Group)}}
-{The University of California, Berkeley}
+{University of California, Berkeley}
 {Thesis Title: Effective Interactions for Few-Body Physics. 
 \begin{itemize}
 \item Analytical simplification of three-body interactions in atomic nuclei 
-\item Numerically determined spectra of exotic interactions in Bose-Einstein condensates using C++ and Mathematica
+\item Numerically determined spectra of spin-orbit interactions in Bose-Einstein condensates using C++ and Mathematica
 \end{itemize}}
 %------------------------------------------------
 \entry
 {June 2009}
 {Bachelor of Science, {\normalfont Physics (Reinhardt Group)}}
-{The University of Washington}
+{University of Washington}
 {Magna cum laude with honors. Minors in mathematics and chemistry. 
 \begin{itemize}
 \item Built software in C with OpenMP and MPI to simulate dynamics of Bose-Einstein condensates using large-scale parallel computing resources.
@@ -107,10 +126,10 @@ sci. programming
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{publications}
-\newrefcontext[sorting=chronological]%
-    \nocite{*}%
-    \printbibliography[heading=none]%
+%\section{publications}
+%\newrefcontext[sorting=chronological]%
+%    \nocite{*}%
+%    \printbibliography[heading=none]%
 %\printbibsection{article} % Print all articles from the bibliography
 
 
@@ -118,41 +137,41 @@ sci. programming
 %	RELEVANT COURSEWORK SECTION
 %----------------------------------------------------------------------------------------
 
-\section{coursework}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{Spring 2014}
-{CS 289A: Introduction to Machine Learning}
-{UC Berkeley}
-{Theory and practice of classification and regression. Python implementation of models including logistic regression, random forests, neural networks, and boosting methods for classification of MNIST handwritten digits.} 
-%------------------------------------------------
-\entry
-{Spring 2014}
-{Info 290T: Data Mining}
-{UC Berkeley}
-{Practical aspects of data workflow including cleaning, ETL pipelines, distributed computing, modeling, and visualization. Taught by an industry professional.}
-%------------------------------------------------
-\entry
-{Fall 2014}
-{CS 281A: Statistical Learning Theory}
-{UC Berkeley}
-{Theoretical foundations of machine learning including detection and estimation theory, batch and incremental optimization, graphical models, exponential families.}
-%------------------------------------------------
-\entry
-{Jan. 2015}
-{Distributed Analytics \& ML with Apache Spark}
-{Berkeley Institute for Data Science}
-{Apache Spark and MLlib for distributed analysis of large data sets including click-through rate predictions and log analysis.}
-%------------------------------------------------
-\entry
-{In Progress}
-{CS 294: Deep Reinforcement Learning}
-{UC Berkeley}
-{Reinforcement learning with deep neural networks. Topics include imitation learning, policy gradient methods, and Q-learning. Self study.}
-%------------------------------------------------
-\end{entrylist}
+%\section{coursework}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%\entry
+%{Spring 2014}
+%{CS 289A: Introduction to Machine Learning}
+%{UC Berkeley}
+%{Theory and practice of classification and regression. Python implementation of models including logistic regression, random forests, neural networks, and boosting methods for classification of MNIST handwritten digits.} 
+%%------------------------------------------------
+%\entry
+%{Spring 2014}
+%{Info 290T: Data Mining}
+%{UC Berkeley}
+%{Practical aspects of data workflow including cleaning, ETL pipelines, distributed computing, modeling, and visualization. Taught by an industry professional.}
+%%------------------------------------------------
+%\entry
+%{Fall 2014}
+%{CS 281A: Statistical Learning Theory}
+%{UC Berkeley}
+%{Theoretical foundations of machine learning including detection and estimation theory, batch and incremental optimization, graphical models, exponential families.}
+%%------------------------------------------------
+%\entry
+%{Jan. 2015}
+%{Distributed Analytics \& ML with Apache Spark}
+%{Berkeley Institute for Data Science}
+%{Apache Spark and MLlib for distributed analysis of large data sets including click-through rate predictions and log analysis.}
+%%------------------------------------------------
+%\entry
+%{In Progress}
+%{CS 294: Deep Reinforcement Learning}
+%{UC Berkeley}
+%{Reinforcement learning with deep neural networks. Topics include imitation learning, policy gradient methods, and Q-learning. Self study.}
+%%------------------------------------------------
+%\end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION

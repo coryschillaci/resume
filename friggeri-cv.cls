@@ -164,11 +164,11 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{12.5cm}{%
+  \parbox[t]{1.8cm}{#1}&\parbox[t]{12.5cm}{%
     \textbf{#2}%
     \hfill%
     {\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    \vspace{.15cm}#4\vspace{0.5cm}%
   }\\}
 
 
